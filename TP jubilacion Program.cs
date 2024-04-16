@@ -9,18 +9,15 @@ namespace TP_Jubilacion
         {
             int edadUsuario = IngresoEdad("Ingrese su edad");
             char generoUsuario = IngresoGenero("Ingrese su género (F o M)");
-
             string mensajeAUsuario= mePuedoJubilar(edadUsuario, generoUsuario, "Te podés jubilar :)", "Todavía no te podés jubilar");
-
             Console.WriteLine(mensajeAUsuario);
         }
-
+        //modulos
         static int IngresoEdad(string mensaje)
         {
             Console.WriteLine(mensaje);
             return int.Parse(Console.ReadLine());
         }
-
         static char IngresoGenero(string mensaje)
             {
             Console.WriteLine(mensaje);
@@ -30,7 +27,6 @@ namespace TP_Jubilacion
         {
             const char mujer = 'F';
             const char hombre = 'M';
-
             if ((edad >= 60 && genero == mujer) || (edad >= 65 && genero == mujer))
             {
                 return (mensajeSi);
